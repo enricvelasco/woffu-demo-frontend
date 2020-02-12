@@ -1,3 +1,8 @@
 const colorsBase = {
-  blue: '#2C7FE2'
+  blue: '#2C7FE2',
+  grey: '#F3F2F7'
+}
+
+export const colors = {
+  backgroundColor: colorsBase.grey
 }
