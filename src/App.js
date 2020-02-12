@@ -4,6 +4,7 @@ import Spinner from './components/spinner'
 import { GlobalStyle } from './styles/themes/GlobalStyles'
 import Header from './components/header'
 import Layout from './components/layout'
+import UsersList from './scenes/users-list'
 
 const App = () => {
   const { data, isLoading } = useContext(Context)
@@ -17,7 +18,7 @@ const App = () => {
           isLoading ?
             <Spinner/>
             :
-            <p>DEMO</p>
+            <UsersList />
         }
       </Layout>
     </div>
