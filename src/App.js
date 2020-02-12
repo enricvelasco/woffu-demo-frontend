@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Context } from './Context'
 import Spinner from './components/spinner'
 import { GlobalStyle } from './styles/themes/GlobalStyles'
+import Header from './components/header'
 
 const App = () => {
   const { data, isLoading } = useContext(Context)
@@ -9,9 +10,13 @@ const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <h1>Hi this is React Starter!!</h1>
-      {isLoading && <Spinner/>}
-      <p>DEMO</p>
+      <Header />
+      {
+        isLoading ?
+          <Spinner/>
+          :
+          <p>DEMO</p>
+      }
     </div>
   )
 }
