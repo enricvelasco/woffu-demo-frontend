@@ -1,6 +1,8 @@
 import React from 'react';
-import { Column, Row } from '../grid-layout'
+import { Column } from '../grid-layout'
+import { Row, UserKeyColumn, DateColumn } from './style'
 import GeneralInfoColumn from './components/general-info-column'
+import { dateFormatter } from '../../services/date'
 
 const ItemRow = ({ item }) => {
   return (
@@ -14,9 +16,9 @@ const ItemRow = ({ item }) => {
         lastName={item.LastName}
         large={4}
       />
-      <Column large={4}>{item.UserKey}</Column>
+      <UserKeyColumn large={4}>{item.UserKey}</UserKeyColumn>
       <Column large={4}>HOLA 3</Column>
-      <Column large={4}>{item.EmployeeStartDate}</Column>
+      <DateColumn large={4}>{dateFormatter(item.EmployeeStartDate)}</DateColumn>
     </Row>
   )
 }
