@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Context } from './Context'
-import Spinner from './components/spinner'
-import { GlobalStyle } from './styles/themes/GlobalStyles'
-import Header from './components/header'
-import Layout from './components/layout'
-import UsersList from './scenes/users-list'
+import Spinner from '@Components/spinner'
+import { GlobalStyle } from '@Styles/themes/GlobalStyles'
+import Header from '@Components/header'
+import Layout from '@Components/layout'
+import UsersList from '@Scenes/users-list'
 
 const App = () => {
   const { data, isLoading } = useContext(Context)

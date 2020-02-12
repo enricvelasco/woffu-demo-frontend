@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
+import List from '@Components/list'
 import FilterHeader from './components/filter-header'
-import List from '../../components/list'
 import { Context } from '../../Context'
 
 const UsersList = () => {

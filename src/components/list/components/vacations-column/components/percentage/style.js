@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../../../../../styles/config/colors'
+import { colors } from '@Styles/config/colors'
 
 export const FullBar = styled.div`
   width: 150px;

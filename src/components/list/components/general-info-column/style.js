@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { fonts } from '../../../../styles/config/fonts'
-import { colors } from '../../../../styles/config/colors'
+import { fonts } from '@Styles/config/fonts'
+import { colors } from '@Styles/config/colors'
 
 export const InfoCol = styled.div`
   display: flex;
