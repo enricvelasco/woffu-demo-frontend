@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../../services/math'
+import { getRandomNumber } from '@Services/math'
 
 const colors = [
   { color: '#FABF44' },

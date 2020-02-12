@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, UserKeyColumn, DateColumn } from './style'
 import GeneralInfoColumn from './components/general-info-column'
-import { dateFormatter } from '../../services/date'
+import { dateFormatter } from '@Services/date'
 import VacationsColumn from './components/vacations-column'
 import { Column } from '../grid-layout'
 

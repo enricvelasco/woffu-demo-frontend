@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mediaQueries } from '../../styles/config/media-queries'
+import { mediaQueries } from '@Styles/config/media-queries'
 
 const maxWidth = 960
 
