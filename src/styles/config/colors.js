@@ -4,5 +4,6 @@ const colorsBase = {
 }
 
 export const colors = {
-  backgroundColor: colorsBase.grey
+  backgroundColor: colorsBase.grey,
+  navBarColor: colorsBase.blue
 }
