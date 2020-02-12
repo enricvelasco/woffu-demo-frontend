@@ -3,6 +3,7 @@ import { userCredentials } from './utils/credentials'
 import { createAutorizationHeader } from './services/header'
 import { usersUrl } from './utils/urls'
 import { getApiInfo } from './services/data'
+import { mock } from './utils/demo-mock'
 
 export const Context = createContext()
 
@@ -18,7 +19,8 @@ const Provider = ({ children }) => {
 
   const [isLoading, setIsLoading] = useState(false)
   const [isErrorPage, setIsErrorPage] = useState(false)
-  const [data, setData] = useState(() => getData())
+  // const [data, setData] = useState(() => getData())
+  const [data, setData] = useState(mock)
 
   const value = {
     data,

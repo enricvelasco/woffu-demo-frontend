@@ -15,10 +15,9 @@ const App = () => {
       <Header />
       <Layout>
         {
-          isLoading ?
-            <Spinner/>
-            :
-            <UsersList />
+          isLoading
+            ? <Spinner />
+            : <UsersList />
         }
       </Layout>
     </div>

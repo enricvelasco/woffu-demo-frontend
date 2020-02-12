@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { InfoCol, TextContainer, TextName, TextJob } from './style'
 import RoundedPicture from '../../../rounded-picture'
 import RoundedText from '../../../rounded-text'
@@ -9,23 +9,22 @@ const GeneralInfoColumn = ({
   firstName,
   lastName,
   jobTitleId,
-  departmentId,
+  departmentId
 }) => {
   console.log('IMAGE:', jobTitleId)
   return (
     <InfoCol>
       {
-        imageUrl ?
-          <RoundedPicture picture={imageUrl} alt={firstName}/>
-          :
-          <RoundedText text={acronym} />
+        imageUrl
+          ? <RoundedPicture picture={imageUrl} alt={firstName} />
+          : <RoundedText text={acronym} />
       }
       <TextContainer>
         <TextName>{firstName} {lastName}</TextName>
         <TextJob>{jobTitleId} | {departmentId}</TextJob>
       </TextContainer>
     </InfoCol>
-  );
+  )
 }
 
-export default GeneralInfoColumn;
+export default GeneralInfoColumn

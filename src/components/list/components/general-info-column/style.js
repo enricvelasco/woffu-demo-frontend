@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { fonts } from '../../../../styles/config/fonts'
 import { colors } from '../../../../styles/config/colors'
-import { ColumnStyled } from '../../../grid-layout/style'
 
-export const InfoCol = styled(ColumnStyled)`
+export const InfoCol = styled.div`
+  display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-flow: row;
+  flex-direction: row;
 `
 
 export const TextContainer = styled.div`

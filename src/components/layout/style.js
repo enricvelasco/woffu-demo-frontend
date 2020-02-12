@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { mediaQueries } from '../../styles/config/media-queries'
 
-const maxWidth = 960;
+const maxWidth = 960
 
 export const Container = styled.div`
   margin: 40px auto 0 auto;

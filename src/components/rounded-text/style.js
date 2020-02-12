@@ -6,7 +6,7 @@ export const RoundedContainer = styled.div`
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: ${({ backgroundColor }) => backgroundColor && backgroundColor};;
+  background-color: ${({ backgroundColor }) => backgroundColor};;
   display: flex;
   justify-content: center;
   align-items: center;

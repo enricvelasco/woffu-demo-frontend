@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react'
 import { Container, FilterContainer, FilterContainerText, InputContainer } from './style'
 
 const FilterHeader = () => (
-    <Container>
-      <div>
+  <Container>
+    <div>
         EQUIPO
-      </div>
-      <FilterContainer>
-        <FilterContainerText>
+    </div>
+    <FilterContainer>
+      <FilterContainerText>
           Filtrar por fecha de incorporación
-        </FilterContainerText>
-        <InputContainer>
+      </FilterContainerText>
+      <InputContainer>
           INPUT FECHA INIT
-        </InputContainer>
-        <InputContainer>
+      </InputContainer>
+      <InputContainer>
           INPUT FECHA FIN
-        </InputContainer>
-      </FilterContainer>
-    </Container>
-);
+      </InputContainer>
+    </FilterContainer>
+  </Container>
+)
 
-export default FilterHeader;
+export default FilterHeader
