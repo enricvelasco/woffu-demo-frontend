@@ -5,6 +5,7 @@ import { mediaQueries } from '@Styles/config/media-queries'
 
 export const Input = styled.input`
   border: 1px solid ${colors.inputBorderColor};
+  background-color: ${colors.backgoundColorLight};
   color: ${colors.inputTextColor};
   border-radius: 5px;
   font-family: ${fonts.primaryFont};
@@ -16,7 +17,7 @@ export const Input = styled.input`
   ${mediaQueries.desktop} {
     font-size: 14px;
     padding: 8px;
-    width: 140px;
+    width: 150px;
     margin: 0 5px;
   }
   
