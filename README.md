@@ -4,6 +4,12 @@
 
 Responsive application that allows filtering by date and sorting the columns of the results
 
+## PWA
+- If you do want to use it as a common application you can download it from the browser
+
+
+![Screenshot](readme-images/captura_1.png)
+
 ## Avaliable Scripts
 
 ### Install
