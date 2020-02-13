@@ -6,20 +6,24 @@ import { Context } from '../../Context'
 const headerItems = [
   {
     id: 1,
-    name: 'Información personal'
+    name: 'Información personal',
+    key: 'FirstName'
   },
   {
     id: 2,
-    name: 'ID'
+    name: 'ID',
+    key: 'UserKey'
   },
   {
     id: 3,
-    name: 'Vacaciones'
+    name: 'Vacaciones',
+    key: 'UsedDays'
   },
   {
     id: 4,
-    name: 'Fecha de incorporación a la empresa'
-  },
+    name: 'Fecha de incorporación a la empresa',
+    key: 'EmployeeStartDate'
+  }
 ]
 
 const UsersList = () => {
