@@ -9,7 +9,8 @@ const colorsBase = {
   grey_5: 'rgba(172, 185, 199, 0.1)',
   grey_6: 'rgba(172, 185, 199, 0.4)',
   white: '#F0F9F3',
-  white_1: '#F9F9FB'
+  white_1: '#F9F9FB',
+  red: '#FA5E5B'
 }
 
 export const colors = {
@@ -24,6 +25,8 @@ export const colors = {
   percentageBarUsedColor: colorsBase.blue_2,
   percentageBarColorBackground: colorsBase.grey_2,
   inputBorderColor: colorsBase.grey_6,
+  inputErrorBorderColor: colorsBase.red,
+  inputFocusedColor: colorsBase.blue,
   inputTextColor: colorsBase.grey_6,
   arrowHoverColor: colorsBase.blue
 }

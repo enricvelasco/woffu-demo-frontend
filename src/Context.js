@@ -13,21 +13,21 @@ const Provider = ({ children }) => {
     getApiInfo(usersUrl, createAutorizationHeader(userCredentials.userName, userCredentials.password))
       .then(response => {
         setIsLoading(false)
-        setData(response)
+        response.code === 200 ? setData(response.content) : setHasError(response)
       })
   }
 
   const [isLoading, setIsLoading] = useState(false)
-  const [isErrorPage, setIsErrorPage] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const [data, setData] = useState(() => getData())
-  //const [data, setData] = useState(mock)
+  // const [data, setData] = useState(mock)
   const [filteredData, setFilteredData] = useState(null)
 
   const value = {
     data,
     filteredData,
     isLoading,
-    isErrorPage,
+    hasError,
     setData: (val) => { setData(val) },
     setFilteredData: (val) => { setFilteredData(val) },
     reloadData: () => {

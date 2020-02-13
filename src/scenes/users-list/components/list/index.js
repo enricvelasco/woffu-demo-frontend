@@ -7,6 +7,8 @@ import GeneralInfoColumn from './components/general-info-column'
 import VacationsColumn from './components/vacations-column'
 import { sortUpByKey } from '@Services/sort'
 import { Context } from '../../../../Context'
+import Spinner from '@Components/spinner'
+import ErrorText from '@Components/error'
 
 const ItemRow = ({ item }) => {
   return (
@@ -35,7 +37,7 @@ const ItemRow = ({ item }) => {
 }
 
 const List = ({ items = [], config = [] }) => {
-  const { data, setData, filteredData, setFilteredData } = useContext(Context)
+  const { data, setData, filteredData, setFilteredData, isLoading, hasError } = useContext(Context)
 
   const onSortList = (direction, key) => {
     if (direction === 'up') {
@@ -54,9 +56,17 @@ const List = ({ items = [], config = [] }) => {
           </Column>
         ))}
       </RowHeader>
-      <ListContainer>
-        {items.map(item => <ItemRow key={item.$id} item={item} />)}
-      </ListContainer>
+      {isLoading
+        ? <Spinner />
+        : <div>
+          {hasError
+            ? <ErrorText>Error code: {hasError.code} ---- {hasError.content.Message}</ErrorText>
+            : <ListContainer>
+              {items.map(item => <ItemRow key={item.$id} item={item} />)}
+              </ListContainer>
+          }
+          </div>
+      }
     </>
   )
 }

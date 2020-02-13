@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 import { fonts } from '@Styles/config/fonts'
 import { colors } from '@Styles/config/colors'
+import { mediaQueries } from '@Styles/config/media-queries'
 
 export const InfoCol = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  padding-left: 0;
+  ${mediaQueries.desktop} {
+    padding-left: 25px;
+  }
 `
 
 export const TextContainer = styled.div`

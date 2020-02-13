@@ -4,7 +4,7 @@ import { mediaQueries } from '@Styles/config/media-queries'
 const maxWidth = 960
 
 export const Container = styled.div`
-  margin: 40px auto 0 auto;
+  margin: 40px auto 20px auto;
   width: 100%;
   background-color: white;
   padding: 8px 0;

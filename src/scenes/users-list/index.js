@@ -28,7 +28,7 @@ const headerItems = [
 
 const UsersList = () => {
   const { data, filteredData } = useContext(Context)
-  const itemsList = filteredData ? filteredData : data
+  const itemsList = filteredData || data
 
   return (
     <>
