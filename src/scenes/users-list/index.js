@@ -27,11 +27,13 @@ const headerItems = [
 ]
 
 const UsersList = () => {
-  const { data } = useContext(Context)
+  const { data, filteredData } = useContext(Context)
+  const itemsList = filteredData ? filteredData : data
+
   return (
     <>
       <FilterHeader />
-      <List items={data} config={headerItems} />
+      <List items={itemsList} config={headerItems} />
     </>
   )
 }

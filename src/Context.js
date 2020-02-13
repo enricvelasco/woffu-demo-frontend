@@ -20,13 +20,16 @@ const Provider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [isErrorPage, setIsErrorPage] = useState(false)
   const [data, setData] = useState(() => getData())
-  // const [data, setData] = useState(mock)
+  //const [data, setData] = useState(mock)
+  const [filteredData, setFilteredData] = useState(null)
 
   const value = {
     data,
+    filteredData,
     isLoading,
     isErrorPage,
     setData: (val) => { setData(val) },
+    setFilteredData: (val) => { setFilteredData(val) },
     reloadData: () => {
       getData()
     }

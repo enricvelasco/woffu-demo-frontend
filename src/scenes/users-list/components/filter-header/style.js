@@ -11,10 +11,11 @@ export const FilterContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 `
 
 export const FilterContainerText = styled.p`
-
+  
 `
 
 export const InputContainer = styled.form`

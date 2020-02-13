@@ -2,19 +2,20 @@ import React, { useState, useEffect, useContext } from 'react'
 import DateInput from '@Components/date-input'
 import { Container, FilterContainer, FilterContainerText, InputContainer } from './style'
 import { Context } from '../../../../Context'
+import { filterByDate } from '@Services/date'
 
 const FilterHeader = () => {
-  const { data, isLoading } = useContext(Context)
+  const { data, setFilteredData, isLoading } = useContext(Context)
 
   const [startDate, setStartDate] = useState(null)
   const [endDate, setEndDate] = useState(null)
 
   const setFilter = () => {
-    console.log('HACER FILTRO')
+    const filtered = filterByDate(data, startDate, endDate)
+    setFilteredData(filtered)
   }
 
   useEffect(() => {
-    //console.log('USE EFFECT', startDate, endDate, 'DATA:', data)
     data && setFilter()
   }, [startDate, endDate])
 
@@ -27,7 +28,7 @@ const FilterHeader = () => {
         <FilterContainerText>
           Filtrar por fecha de incorporación
         </FilterContainerText>
-        <InputContainer onSubmit={() => console.log('onSubmit')}>
+        <InputContainer>
           <DateInput max={endDate} onChangeDate={date => setStartDate(date)} />
           <DateInput min={startDate} onChangeDate={date => setEndDate(date)} />
         </InputContainer>
