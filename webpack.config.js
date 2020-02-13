@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   devServer: {
@@ -26,5 +27,17 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    // Enable importing JS files without specifying their's extension
+    extensions: ['.js', '.jsx'],
+    alias: {
+      // JS alias
+      '@Components': path.resolve(__dirname, './src/components/'),
+      '@Scenes': path.resolve(__dirname, './src/scenes/'),
+      '@Services': path.resolve(__dirname, './src/services/'),
+      '@Styles': path.resolve(__dirname, './src/styles/'),
+      '@Utils': path.resolve(__dirname, './src/utils/')
+    }
   }
 }
