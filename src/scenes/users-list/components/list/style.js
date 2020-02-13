@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '@Styles/config/colors'
 import { fonts } from '@Styles/config/fonts'
+import { mediaQueries } from '@Styles/config/media-queries'
 import { RowStyled } from '@Components/grid-layout/style'
 
 export const RowContent = styled(RowStyled)`
@@ -14,22 +15,31 @@ export const UserKeyColumn = styled.div`
   margin: 0 auto;
   font-family: ${fonts.primaryFont};
   color: ${colors.darkTextListColor};
-  font-size: 15px;
+  font-size: 13px;
+  ${mediaQueries.desktop} {
+    font-size: 15px;
+  }
 `
 
 export const DateColumn = styled.div`
   margin: 0 auto;
   font-family: ${fonts.primaryFont};
   color: ${colors.darkTextListColor};
-  font-size: 15px;
+  font-size: 13px;
+  ${mediaQueries.desktop} {
+    font-size: 15px;
+  }
 `
 
 export const HeaderItem = styled.div`
   width: 100%;
   text-align: center;
   font-family: ${fonts.primaryFont};
-  font-size: 14px;
   color: ${colors.listHeaderTextColor};
+  font-size: 13px;
+  ${mediaQueries.desktop} {
+    font-size: 14px;
+  }
 `
 
 export const RowHeader = styled(RowStyled)`
