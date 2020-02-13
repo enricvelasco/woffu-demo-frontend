@@ -8,7 +8,7 @@ const FilterHeader = () => {
 
   useEffect(() => {
     console.log('USE EFFECT', startDate, endDate)
-  }, [startDate, endDate]);
+  }, [startDate, endDate])
 
   return (
     <Container>
@@ -20,10 +20,10 @@ const FilterHeader = () => {
           Filtrar por fecha de incorporación
         </FilterContainerText>
         <InputContainer>
-          <DateInput max={endDate} onChangeDate={date => setStartDate(date)}/>
+          <DateInput max={endDate} onChangeDate={date => setStartDate(date)} />
         </InputContainer>
         <InputContainer>
-          <DateInput min={startDate} onChangeDate={date => setEndDate(date)}/>
+          <DateInput min={startDate} onChangeDate={date => setEndDate(date)} />
         </InputContainer>
       </FilterContainer>
     </Container>

@@ -31,17 +31,6 @@ export const DateColumn = styled.div`
   }
 `
 
-export const HeaderItem = styled.div`
-  width: 100%;
-  text-align: center;
-  font-family: ${fonts.primaryFont};
-  color: ${colors.listHeaderTextColor};
-  font-size: 13px;
-  ${mediaQueries.desktop} {
-    font-size: 14px;
-  }
-`
-
 export const RowHeader = styled(RowStyled)`
   background-color: ${colors.listeHeaderColor};
   padding: 10px 5px;

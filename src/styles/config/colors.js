@@ -25,4 +25,5 @@ export const colors = {
   percentageBarColorBackground: colorsBase.grey_2,
   inputBorderColor: colorsBase.grey_6,
   inputTextColor: colorsBase.grey_6,
+  arrowHoverColor: colorsBase.blue
 }

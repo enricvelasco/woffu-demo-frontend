@@ -8,7 +8,6 @@ import UsersList from '@Scenes/users-list'
 
 const App = () => {
   const { data, isLoading } = useContext(Context)
-  console.log('DATA:', data, isLoading)
   return (
     <div>
       <GlobalStyle />
