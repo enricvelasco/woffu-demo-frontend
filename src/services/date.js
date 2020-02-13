@@ -16,5 +16,7 @@ export const filterByDate = (items = [], startDate, endDate) => {
   const start = !!startDate ? startDate :  new Date(null)
   const end = !!endDate ? endDate :  new Date()
 
-  return items.filter(item => stingToDate(item.EmployeeStartDate) >= stingToDate(start) && stingToDate(item.EmployeeStartDate) <= stingToDate(end))
+  return items.filter(item => (
+    stingToDate(item.EmployeeStartDate) <= stingToDate(end) && stingToDate(start) < stingToDate(item.EmployeeStartDate))
+  )
 }
