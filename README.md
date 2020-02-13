@@ -4,7 +4,7 @@
 
 Responsive application that allows filtering by date and sorting the columns of the results
 
-##Avaliable Scripts
+## Avaliable Scripts
 
 ### Install
 ```
