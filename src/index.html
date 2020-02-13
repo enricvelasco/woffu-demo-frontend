@@ -4,9 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" sizes="32x32" href="icon.ico">
     <title>Woffu demo</title>
 </head>
 <body>
     <div id="app"></div>
+    <noscript>
+        <h3>Esta app necesita Javascript para funcionar</h3>
+    </noscript>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+              console.log('SW registrado')
+            })
+            .catch(registrationError => {
+              console.log('SW error', registrationError)
+            })
+        })
+      }
+    </script>
 </body>
 </html>
