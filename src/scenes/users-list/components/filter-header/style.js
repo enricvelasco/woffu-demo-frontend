@@ -42,8 +42,6 @@ export const FilterContainerText = styled.p`
 
 export const InputContainer = styled.form`
   margin: 0 5px;
-  ${mediaQueries.mobileOnly} {
-     display: flex;
-     flex-direction: row;
-  }
+  display: flex;
+  flex-direction: row;
 `
