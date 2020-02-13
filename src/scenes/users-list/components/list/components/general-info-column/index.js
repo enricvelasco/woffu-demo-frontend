@@ -1,7 +1,7 @@
 import React from 'react'
 import { InfoCol, TextContainer, TextName, TextJob } from './style'
-import RoundedPicture from '../../../rounded-picture'
-import RoundedText from '../../../rounded-text'
+import RoundedPicture from '@Components/rounded-picture'
+import RoundedText from '@Components/rounded-text'
 
 const GeneralInfoColumn = ({
   imageUrl,

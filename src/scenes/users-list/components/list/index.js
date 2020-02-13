@@ -1,9 +1,9 @@
 import React from 'react'
+import { Column } from '@Components/grid-layout'
+import { dateFormatter } from '@Services/date'
 import { Row, UserKeyColumn, DateColumn } from './style'
 import GeneralInfoColumn from './components/general-info-column'
-import { dateFormatter } from '@Services/date'
 import VacationsColumn from './components/vacations-column'
-import { Column } from '../grid-layout'
 
 const ItemRow = ({ item }) => {
   return (

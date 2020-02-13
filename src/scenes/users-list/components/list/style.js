@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '@Styles/config/colors'
 import { fonts } from '@Styles/config/fonts'
-import { RowStyled } from '../grid-layout/style'
+import { RowStyled } from '@Components/grid-layout/style'
 
 export const Row = styled(RowStyled)`
   padding: 10px;

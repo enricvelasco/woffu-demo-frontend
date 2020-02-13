@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import List from '@Components/list'
+import List from './components/list'
 import FilterHeader from './components/filter-header'
 import { Context } from '../../Context'
 
