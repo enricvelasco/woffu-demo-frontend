@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { fonts } from '@Styles/config/fonts'
 import { colors } from '@Styles/config/colors'
+import { mediaQueries } from '@Styles/config/media-queries'
 
 export const Container = styled.div`
   display: flex;
@@ -16,6 +17,10 @@ export const FilterContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-direction: column;
+  ${mediaQueries.desktop} {
+    flex-direction: row;
+  }
 `
 
 export const Team = styled.p`
@@ -28,10 +33,17 @@ export const Team = styled.p`
 
 export const FilterContainerText = styled.p`
   font-family: ${fonts.primaryFont};
-  font-size: 15px;
+  font-size: 13px;
   color: ${colors.listHeaderTextColor};
+  ${mediaQueries.desktop} {
+    font-size: 15px;
+  }
 `
 
 export const InputContainer = styled.form`
- margin: 0 5px;
+  margin: 0 5px;
+  ${mediaQueries.mobileOnly} {
+     display: flex;
+     flex-direction: row;
+  }
 `
