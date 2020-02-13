@@ -20,7 +20,7 @@ const Provider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [hasError, setHasError] = useState(false)
   const [data, setData] = useState(() => getData())
-  //const [data, setData] = useState(mock)
+  // const [data, setData] = useState(mock)
   const [filteredData, setFilteredData] = useState(null)
 
   const value = {

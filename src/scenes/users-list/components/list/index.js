@@ -63,10 +63,8 @@ const List = ({ items = [], config = [] }) => {
             ? <ErrorText>Error code: {hasError.code} ---- {hasError.content.Message}</ErrorText>
             : <ListContainer>
               {items.map(item => <ItemRow key={item.$id} item={item} />)}
-              </ListContainer>
-          }
-          </div>
-      }
+              </ListContainer>}
+          </div>}
     </>
   )
 }
