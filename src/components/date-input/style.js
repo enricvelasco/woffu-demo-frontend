@@ -5,6 +5,7 @@ import { mediaQueries } from '@Styles/config/media-queries'
 
 export const Input = styled.input`
   border: 1px solid ${colors.inputBorderColor};
+  background-color: ${colors.backgoundColorLight};
   color: ${colors.inputTextColor};
   border-radius: 5px;
   font-family: ${fonts.primaryFont};

@@ -10,10 +10,12 @@ const colorsBase = {
   grey_6: 'rgba(172, 185, 199, 0.4)',
   white: '#F0F9F3',
   white_1: '#F9F9FB',
+  white_2: '#FFFFFF',
   red: '#FA5E5B'
 }
 
 export const colors = {
+  backgoundColorLight: colorsBase.white_2,
   backgroundColor: colorsBase.grey,
   navBarColor: colorsBase.blue,
   whiteTextColor: colorsBase.white,
