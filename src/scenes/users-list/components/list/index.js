@@ -35,21 +35,22 @@ const ItemRow = ({ item }) => {
 }
 
 const List = ({ items = [], config = [] }) => {
-  const { data, setData } = useContext(Context)
+  const { data, setData, filteredData, setFilteredData } = useContext(Context)
 
-  const onOrderList = (direction, key) => {
+  const onSortList = (direction, key) => {
     if (direction === 'up') {
-      setData(sortUpByKey(data, key))
+      filteredData ? setFilteredData(sortUpByKey(filteredData, key)) : setData(sortUpByKey(data, key))
     } else {
-      setData(sortUpByKey(data, key).reverse())
+      filteredData ? setFilteredData(sortUpByKey(filteredData, key).reverse()) : setData(sortUpByKey(data, key).reverse())
     }
   }
+
   return (
     <>
       <RowHeader>
         {config.map(item => (
           <Column key={item.id} large={4} medium={4} small={4}>
-            <HeaderItem itemKey={item.key} onOrder={onOrderList}>{item.name}</HeaderItem>
+            <HeaderItem itemKey={item.key} onSort={onSortList}>{item.name}</HeaderItem>
           </Column>
         ))}
       </RowHeader>

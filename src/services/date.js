@@ -13,8 +13,8 @@ export const dateFormatter = (date) => {
 }
 
 export const filterByDate = (items = [], startDate, endDate) => {
-  const start = startDate !== null ? startDate :  new Date(null)
-  const end = endDate !== null ? endDate :  new Date()
-  const filtered = items.filter(item => stingToDate(item.EmployeeStartDate) >= stingToDate(start) && stingToDate(item.EmployeeStartDate) <= stingToDate(end))
-  return filtered.length > 0 ? filtered : items
+  const start = !!startDate ? startDate :  new Date(null)
+  const end = !!endDate ? endDate :  new Date()
+
+  return items.filter(item => stingToDate(item.EmployeeStartDate) >= stingToDate(start) && stingToDate(item.EmployeeStartDate) <= stingToDate(end))
 }

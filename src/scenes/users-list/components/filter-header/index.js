@@ -1,18 +1,23 @@
 import React, { useState, useEffect, useContext } from 'react'
 import DateInput from '@Components/date-input'
-import { Container, FilterContainer, FilterContainerText, InputContainer } from './style'
+import { Container, FilterContainer, FilterContainerText, InputContainer, Team } from './style'
 import { Context } from '../../../../Context'
 import { filterByDate } from '@Services/date'
 
+const isNullDate = (start, end) => !start && !end
+
 const FilterHeader = () => {
-  const { data, setFilteredData, isLoading } = useContext(Context)
+  const { data, setFilteredData } = useContext(Context)
 
   const [startDate, setStartDate] = useState(null)
   const [endDate, setEndDate] = useState(null)
 
   const setFilter = () => {
-    const filtered = filterByDate(data, startDate, endDate)
-    setFilteredData(filtered)
+    if (isNullDate(!!startDate, !!endDate)) {
+      setFilteredData(null)
+    } else {
+      setFilteredData(filterByDate(data, startDate, endDate))
+    }
   }
 
   useEffect(() => {
@@ -21,9 +26,9 @@ const FilterHeader = () => {
 
   return (
     <Container>
-      <div>
-        EQUIPO
-      </div>
+      <Team>
+        equipo
+      </Team>
       <FilterContainer>
         <FilterContainerText>
           Filtrar por fecha de incorporación
