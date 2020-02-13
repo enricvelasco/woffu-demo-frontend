@@ -11,4 +11,6 @@ export const Input = styled.input`
   padding: 8px;
   width: 140px;
   margin: 0 5px;
+  border: 1px solid ${({ error }) => error ? colors.inputErrorBorderColor : colors.inputTextColor};
+  
 `
