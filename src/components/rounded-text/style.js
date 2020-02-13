@@ -3,7 +3,7 @@ import { fonts } from '@Styles/config/fonts'
 import { colors } from '@Styles/config/colors'
 
 export const RoundedContainer = styled.div`
-  width: 30px;
+  min-width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: ${({ backgroundColor }) => backgroundColor};;
