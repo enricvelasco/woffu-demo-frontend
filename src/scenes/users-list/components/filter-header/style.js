@@ -17,6 +17,6 @@ export const FilterContainerText = styled.p`
 
 `
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.form`
  margin: 0 5px;
 `
