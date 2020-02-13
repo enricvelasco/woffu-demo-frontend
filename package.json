@@ -8,6 +8,8 @@
     "lint": "standard",
     "fix-lint": "standard --fix",
     "dev": "webpack-dev-server",
+    "serve:dev": "webpack --mode 'development' && npx serve dist -s",
+    "serve:pro": "webpack --mode 'production' && npx serve dist -s",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,13 +23,15 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
-    "babel-polyfill": "^6.0.16",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.0.16",
     "html-webpack-plugin": "^3.2.0",
     "standard": "^14.3.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "webpack-pwa-manifest": "^4.2.0",
+    "workbox-webpack-plugin": "^5.0.0"
   },
   "dependencies": {
     "lodash": "^4.17.15",
