@@ -1,13 +1,13 @@
 import React from 'react'
 import { Column } from '@Components/grid-layout'
 import { dateFormatter } from '@Services/date'
-import { Row, UserKeyColumn, DateColumn } from './style'
+import { RowContent, UserKeyColumn, DateColumn, HeaderItem, RowHeader, ListContainer } from './style'
 import GeneralInfoColumn from './components/general-info-column'
 import VacationsColumn from './components/vacations-column'
 
 const ItemRow = ({ item }) => {
   return (
-    <Row>
+    <RowContent>
       <Column large={4} medium={4} small={4}>
         <GeneralInfoColumn
           acronym={item.Acronym}
@@ -22,24 +22,24 @@ const ItemRow = ({ item }) => {
         <UserKeyColumn>{item.UserKey}</UserKeyColumn>
       </Column>
       <Column large={4} medium={4} small={4}>
-        <VacationsColumn used={item.UsedDays} avaliable={item.AvailableDays} large={4} medium={4} small={4} />
+        <VacationsColumn used={item.UsedDays} avaliable={item.AvailableDays} />
       </Column>
       <Column large={4} medium={4} small={4}>
         <DateColumn>{dateFormatter(item.EmployeeStartDate)}</DateColumn>
       </Column>
-    </Row>
+    </RowContent>
   )
 }
 
-const List = ({ items = [], columns, config = [] }) => {
+const List = ({ items = [], config = [] }) => {
   return (
     <>
-      <div>
-        {config.map(item => <p>{item.$id}-{item.FirstName}</p>)}
-      </div>
-      <div>
+      <RowHeader>
+        {config.map(item => <Column key={item.id} large={4} medium={4} small={4} ><HeaderItem>{item.name}</HeaderItem></Column>)}
+      </RowHeader>
+      <ListContainer>
         {items.map(item => <ItemRow key={item.$id} item={item} />)}
-      </div>
+      </ListContainer>
     </>
   )
 }
