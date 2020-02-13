@@ -14,9 +14,9 @@ export const FilterContainer = styled.div`
 `
 
 export const FilterContainerText = styled.p`
-  
+
 `
 
 export const InputContainer = styled.div`
-
+ margin: 0 5px;
 `

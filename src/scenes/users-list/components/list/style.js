@@ -45,8 +45,8 @@ export const HeaderItem = styled.div`
 export const RowHeader = styled(RowStyled)`
   background-color: ${colors.listeHeaderColor};
   padding: 10px 5px;
-  border-top: 1px solid rgba(172, 185, 199, 0.3);
-  border-bottom: 1px solid rgba(172, 185, 199, 0.3);
+  border-top: 1px solid ${colors.headerListBorderColor};
+  border-bottom: 1px solid ${colors.headerListBorderColor};
 `
 
 export const ListContainer = styled.div`

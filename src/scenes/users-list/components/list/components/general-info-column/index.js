@@ -11,7 +11,6 @@ const GeneralInfoColumn = ({
   jobTitleId,
   departmentId
 }) => {
-  console.log('IMAGE:', jobTitleId)
   return (
     <InfoCol>
       {
