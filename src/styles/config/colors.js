@@ -10,7 +10,7 @@ const colorsBase = {
   grey_6: 'rgba(172, 185, 199, 0.4)',
   white: '#F0F9F3',
   white_1: '#F9F9FB',
-  red: '#FA5E5B',
+  red: '#FA5E5B'
 }
 
 export const colors = {
