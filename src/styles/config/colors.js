@@ -6,6 +6,8 @@ const colorsBase = {
   grey_2: '#ECEDF2',
   grey_3: '#ACB9C7',
   grey_4: '#727a82',
+  grey_5: 'rgba(172, 185, 199, 0.1)',
+  grey_6: 'rgba(172, 185, 199, 0.4)',
   white: '#F0F9F3',
   white_1: '#F9F9FB'
 }
@@ -18,6 +20,10 @@ export const colors = {
   listeHeaderColor: colorsBase.white_1,
   listHeaderTextColor: colorsBase.grey_3,
   listHeaderBorderColor: colorsBase.grey_3,
+  headerListBorderColor: colorsBase.grey_5,
   percentageBarUsedColor: colorsBase.blue_2,
-  percentageBarColorBackground: colorsBase.grey_2
+  percentageBarColorBackground: colorsBase.grey_2,
+  inputBorderColor: colorsBase.grey_6,
+  inputTextColor: colorsBase.grey_6,
+  arrowHoverColor: colorsBase.blue
 }

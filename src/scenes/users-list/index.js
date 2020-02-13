@@ -6,28 +6,34 @@ import { Context } from '../../Context'
 const headerItems = [
   {
     id: 1,
-    name: 'Información personal'
+    name: 'Información personal',
+    key: 'FirstName'
   },
   {
     id: 2,
-    name: 'ID'
+    name: 'ID',
+    key: 'UserKey'
   },
   {
     id: 3,
-    name: 'Vacaciones'
+    name: 'Vacaciones',
+    key: 'UsedDays'
   },
   {
     id: 4,
-    name: 'Fecha de incorporación a la empresa'
-  },
+    name: 'Fecha de incorporación a la empresa',
+    key: 'EmployeeStartDate'
+  }
 ]
 
 const UsersList = () => {
-  const { data } = useContext(Context)
+  const { data, filteredData } = useContext(Context)
+  const itemsList = filteredData ? filteredData : data
+
   return (
     <>
       <FilterHeader />
-      <List items={data} config={headerItems} />
+      <List items={itemsList} config={headerItems} />
     </>
   )
 }
