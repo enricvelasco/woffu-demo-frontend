@@ -17,7 +17,7 @@ export const Input = styled.input`
   ${mediaQueries.desktop} {
     font-size: 14px;
     padding: 8px;
-    width: 140px;
+    width: 150px;
     margin: 0 5px;
   }
   
